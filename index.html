@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tic-Tac-Toe</title>
+    <link rel="stylesheet" href="./index.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Tic-Tac-Toe</h1>
+        
+        <div class="settings">
+            <label for="gameMode">Game Mode: </label>
+            <select id="gameMode" onchange="restartGame()">
+                <option value="player">Player vs Player</option>
+                <option value="computer">Player vs Computer</option>
+            </select>
+            <div>
+              <p><br/></p>
+            </div>
+            <div id="difficultyDiv" style="display:none;">
+                <label for="difficulty">Difficulty: </label>
+                <select id="difficulty" onchange="restartGame()">
+                    <option value="easy">Easy</option>
+                    <option value="medium">Medium</option>
+                    <option value="hard">Hard</option>
+                </select>
+            </div>
+        </div>
+
+        <p id="status">Player X's Turn</p>
+
+        <div class="game-board" id="gameBoard">
+            <div class="cell" id="cell0" onclick="makeMove(0)"></div>
+            <div class="cell" id="cell1" onclick="makeMove(1)"></div>
+            <div class="cell" id="cell2" onclick="makeMove(2)"></div>
+            <div class="cell" id="cell3" onclick="makeMove(3)"></div>
+            <div class="cell" id="cell4" onclick="makeMove(4)"></div>
+            <div class="cell" id="cell5" onclick="makeMove(5)"></div>
+            <div class="cell" id="cell6" onclick="makeMove(6)"></div>
+            <div class="cell" id="cell7" onclick="makeMove(7)"></div>
+            <div class="cell" id="cell8" onclick="makeMove(8)"></div>
+        </div>
+
+        <button onclick="restartGame()">Restart Game</button>
+    </div>
+    
+    <script src="./index.js"></script>
+</body>
+</html>
